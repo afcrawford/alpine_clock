@@ -102,11 +102,7 @@ function triangleOmbre(hr, min, sec, c1, c2) {
      
     // using just height for mapping doesnt work when hour is 1 or 13
     let heightStart;
-    if (hr == 1) {
-        heightStart = height - (height / 12);
-    } else {
-        heightStart = height;
-    }
+    heightStart = height - (height / 12);
     let hrHeight = map(hr, 1, 12, heightStart, 0);
     let mountain1Gradient = drawingContext.createLinearGradient(0, height, 0, hrHeight);
     mountain1Gradient.addColorStop(1, c2);
